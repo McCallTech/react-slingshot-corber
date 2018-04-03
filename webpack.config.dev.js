@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
+import CorberWebpackPlugin from 'corber-webpack-plugin';
 
 export default {
   resolve: {
@@ -34,7 +35,7 @@ export default {
         collapseWhitespace: true
       },
       inject: true
-    })
+    }),
   ],
   module: {
     rules: [
