@@ -47,4 +47,4 @@ corber build --platform=android
 sed -i 's%href="/%href="%g' ./corber/cordova/www/index.html
 sed -i 's%src="/%src="%g' ./corber/cordova/www/index.html
 corber b --sfb --platform=android
-http-server ./corber/cordova/platforms/android/app/build/outputs/apk/debug/
+http-server -p 3000 ./corber/cordova/platforms/android/app/build/outputs/apk/debug/
