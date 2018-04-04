@@ -1,7 +1,7 @@
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install java-common oracle-java8-installer
-sudo apt-get install oracle-java8-set-default
+sudo apt-get -y install java-common oracle-java8-installer
+sudo apt-get -y install oracle-java8-set-default
 source /etc/profile
 
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
@@ -9,10 +9,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 sudo add-apt-repository ppa:cwchien/gradle
 sudo apt-get update
-sudo apt-get install gradle
+sudo apt-get -y install gradle
 sudo add-apt-repository ppa:maarten-fonville/android-studio
 sudo apt-get update
-sudo apt-get install android-studio
+sudo apt-get -y install android-studio
 
 
 
@@ -31,6 +31,7 @@ sdkmanager --update
 sdkmanager "platform-tools" "build-tools;26.0.3"  "platforms;android-26"
 ls ${ANDROID_HOME}
 
+sudo apt-get -y install bzip2
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 . ~/.nvm/nvm.sh; nvm i --lts;
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
