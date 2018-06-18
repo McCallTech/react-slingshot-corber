@@ -36,8 +36,8 @@ sudo apt-get -y install bzip2
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 . ~/.nvm/nvm.sh; nvm i --lts;
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-#yarn install
 npm i -g yarn ember-cli corber cordova http-server
+yarn install
 rm -rf corber
 sed -i '/corber/d' ./package.json
 corber init
