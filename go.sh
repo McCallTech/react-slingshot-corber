@@ -39,6 +39,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 #yarn install
 npm i -g yarn ember-cli corber cordova http-server
 rm -rf corber
+sed -i '/corber/d' ./package.json
 corber init
 #corber platform remove android
 #corber platform add android
